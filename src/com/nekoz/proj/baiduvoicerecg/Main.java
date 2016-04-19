@@ -15,6 +15,10 @@ public class Main {
 
     public static void main(String[] args) {
         Logger logger = Logger.getLogger("!main");
+        if (args.length <= 0) {
+            System.out.print("Usage: java -jar BaiduVoiceRecognize.jar VoxFile-16bit-Mono.wav");
+            System.exit(0);
+        }
         R.check();
         try {
             String result = regconize(args[0]);
